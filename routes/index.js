@@ -1,9 +1,13 @@
 var express = require('express');
 var router = express.Router();
+var app = express();
+
+const path = require('path');
+
+//Rendering
+app.use(express.static(path.join(__dirname, 'public')))
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
 
+app.set('view engine', 'ejs');
 module.exports = router;
