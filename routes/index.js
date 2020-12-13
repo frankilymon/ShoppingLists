@@ -5,13 +5,13 @@ const app = express();
 
 const PORT = process.env.PORT || 5000;
 
-/* GET home page. 
+// GET home page. 
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Shopping List' });
-}); */
-app.get('/', (req, res) => {
+}); 
+/*app.get('/', (req, res) => {
   res.send('<h1>Shopping List</h1>')
-})
+})*/
 
 app.listen(PORT, () => console.log(`Server started on ${PORT}`))
 
