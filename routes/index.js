@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const db = require('better-sqlite3')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
