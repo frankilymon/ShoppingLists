@@ -1,3 +1,4 @@
+
 var express = require('express');
 var router = express.Router();
 
@@ -9,7 +10,7 @@ var products = JSON.parse(fs.readFileSync('./data/products.json', 'utf8'));
 router.get('/', function (req, res, next) {
   res.render('index', 
   { 
-    title: 'Shopping Cart',
+    title: 'NodeJS Shopping Cart',
     products: products
   }
   );
@@ -34,7 +35,7 @@ router.get('/cart', function(req, res, next) {
   }
   var cart = new Cart(req.session.cart);
   res.render('cart', {
-    title: 'Shopping Cart',
+    title: 'NodeJS Shopping Cart',
     products: cart.getItems(),
     totalPrice: cart.totalPrice
   });
