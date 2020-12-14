@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="./public/css/style.css" type="text/css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+          <h1>Go-List</h1>
+      </div>
+      <div id="data">
+          <input type="text" id="product" placeholder="Product Name">
+          <input type="number" id="price" placeholder="Price">
+          <button onclick="addData()">Add</button>
+          <button>Delete</button>
+      </div>
+      
+      <table id="table">
+          <tr>
+              <th>SN</th>
+              <th>Product</th>
+              <th id="price">Price</th>
+          </tr>
+      </table>
+      <div id="msg"></div>
+<script src="javascript/script.js"></script>
+<script src="javascript/error.js"></script>
