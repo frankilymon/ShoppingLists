@@ -1,7 +1,7 @@
 //Add data to table.
 function addData(){
     //Getting values
-let btnAdd = document.querySelector("button");
+let btnAdd = document.getElementById("add");
 let table = document.querySelector("table");
 
     
@@ -20,7 +20,7 @@ btnAdd.addEventListener("click", () => {
     else{
         let template = `
             <tr>
-                <td></td>
+                <td>${addIndex()}</td>
                 <td>${product}</td>
                 <td>${'$ ' + price}</td>
                 <td><input type="checkbox" id="check"></td>
@@ -31,15 +31,31 @@ btnAdd.addEventListener("click", () => {
  
     productInput.value = '';
     priceInput.value = '';
-    total();
     }
 
 })
 }
 
-/*add indexing
+//add indexing
 function addIndex(){
     var tableLength = document.getElementById("table").rows.length;
     return tableLength;
-}*/
+}
+
+//delete row
+function deleteRow(){
+
+let btnDel = document.getElementById("delete");
+
+btnDel.addEventListener("click", () => {
+    var items = document.getElementById("table").rows.length
+    var table = document.getElementById("table");
+    var check = document.getElementById("check")
+    console.log(items);
+    for(var i=1; i<items; i++)  {
+        if(check.checked == true) {
+            table.deleteRow(i);}
+        }
+        })
+}
 
